@@ -1,20 +1,17 @@
-public class KidBot implements Bot
-{
-    //ArrayList<String> words = new ArrayList<String>();
-    String[] words = {};
-    public String process(String sentence){
-        words = sentence.split(" ");
+import java.util.Scanner;
+class ChatBot{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        Bot ai = new Bot();
+        System.out.println("Enter an empty response to exit");
+        String text = ""; //Declared here so it's stored at the same address instead of a new one
         String response = "";
-        if(!words[0].equals("")){
-
-            int index = 0;
-            while(index < words.length){
-                response += words[index] + " ";
-                index++;
-            }
-            response += "?";
-        }
-        //Could cut off the last space if we wanted
-        return response;
+        do{
+            System.out.print("User: ");
+            text = scan.nextLine();
+            System.out.println("Bot: " + ai.process(text));
+        }while(!text.toLowerCase().equals(""));
+        System.out.println("Goodbye.");
     }
+
 }
