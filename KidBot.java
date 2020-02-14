@@ -1,4 +1,4 @@
-public class KidBot implements Bot
+public class Bot
 {
     //ArrayList<String> words = new ArrayList<String>();
     String[] words = {};
