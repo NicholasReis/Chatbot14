@@ -1,20 +1,25 @@
-public class Bot
-{
-    //ArrayList<String> words = new ArrayList<String>();
-    String[] words = {};
+public class Bot{
     public String process(String sentence){
-        words = sentence.split(" ");
-        String response = "";
+        //Reads in all the sentence as individual words
+        String[] words = sentence.split(" ");
+        //If they responded
         if(!words[0].equals("")){
-
+          //Initializes the string to concatenate
+            String response = "";
+            //Number of words in sentence
             int index = 0;
+            //Analyzes words
             while(index < words.length){
+                //Temporary response for test before we work on analyzing
                 response += words[index] + " ";
+
+                //Increments word
                 index++;
             }
+            //Adds question mark to make what you said a question
             response += "?";
         }
-        //Could cut off the last space if we wanted
+        //Needs to cut off last space
         return response;
     }
 }
