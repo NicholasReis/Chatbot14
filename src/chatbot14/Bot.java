@@ -1,3 +1,5 @@
+package chatbot14;
+
 public class Bot{
     public String process(String sentence){
         //Reads in all the sentence as individual words
