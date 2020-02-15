@@ -41,6 +41,7 @@ public class chatty {
 		int n = 3;
 		while (numIter < n) {
 			//userInput = "i remember picking flowers";
+			System.out.print("User: ");
 			String userInput = in.nextLine();
 			for (int i = 0; i < rememberPattern.length; i++) { 
 				// check if input matches either pattern in rememberPattern
@@ -49,6 +50,7 @@ public class chatty {
 					userInput = userInput.replaceFirst(rememberPattern[i], "$3"); 
 					// the random number will choose a random response from the list
 					int r = (int)(Math.random()*rememberResponse[i].length); 
+					System.out.print("Bot: ");
 					// We are replacing the 0 in the rememberResponse with the input we extracted above
 					print(rememberResponse[i][r].replaceAll("(.*)(0)","$1" + userInput)); 					
 				}
