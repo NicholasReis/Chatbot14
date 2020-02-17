@@ -9,6 +9,7 @@ package sample;
 public class chatty0 {
 
 	public static void main(String[] args) {
+		System.out.print("Bot: ");
 		print("What do you remember?");
 		// In the regex pattern below, parenthesis form sections.
 		// There are three sections in the pattern below, each referred to as $1, $2, $3
@@ -16,7 +17,7 @@ public class chatty0 {
 		String rememberPattern = "(.*)(i remember )(.*)";
 		// instead of actually getting the userInput from the user, we hardcode it here
 		String userInput = "i remember picking flowers";
-		System.out.print("User: " + userInput);
+		print("User: " + userInput);
 		// we extract the "picking flowers" from the userInput
 		userInput = userInput.replaceFirst(rememberPattern, "$3");
 		System.out.print("Bot: ");
