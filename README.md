@@ -15,9 +15,9 @@ Simple example of how to implement regex expressions. Exists for the sake of lea
 ### chatty1 class
 Implements the Eliza script for the keyword remember
 
-Limitations of chatty class: 
- * 1. can only write in lowercase - it doesn't parse uppercase yet.
- * 2. Need to use keyword "i remember" or "do you remember" in user input
+Limitations of chatty1 class: 
+ * Can only write in lowercase - it doesn't parse uppercase yet.
+ * Need to use keyword "i remember" or "do you remember" in user input
 Sample output:
   	Bot: What do you remember?
 	User: i remember going for a walk
@@ -35,4 +35,6 @@ if (userInput.matches(rememberPattern[i])) {
 
 In line 51 a random number is generated to return one of the responses in the rememberResponse String array.
 
-
+## ideas
+Text-to-speech - free services - 350 daily requests
+http://www.voicerss.org/default.aspx

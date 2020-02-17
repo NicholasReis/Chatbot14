@@ -17,7 +17,7 @@ import java.util.regex.*;
  */
 	// next step is replace i and me with you and vice versa
 
-public class chatty {
+public class chatty1 {
 
 	static String[] rememberPattern = {"(.*)(i remember )(.*)",
 	"(.*)(do you remember )(.*)"};
