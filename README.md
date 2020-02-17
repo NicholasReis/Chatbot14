@@ -4,8 +4,16 @@ Group14 Chatbot
 ## package chatbot14 
 Contains the two classes Bot and ChatBot which include the starter code that Nicholas has been working on.
 
-## package sample 
-Contains the class chatty that has the Eliza script implemented for the keyword remember - done by Heather
+## package sample
+Implemented by Heather. Refer to her for questions about it. 
+
+Instead of using System.out.println() I created a class print to use instead. (Too lazy to use System.out.println())
+
+### chatty0 class
+Simple example of how to implement regex expressions. Exists for the sake of learning and understanding the chatty1 class.
+
+### chatty1 class
+Implements the Eliza script for the keyword remember
 
 Limitations of chatty class: 
  * 1. can only write in lowercase - it doesn't parse uppercase yet.
@@ -18,8 +26,6 @@ Sample output:
 	Bot: You mentioned walking with me.
 	User: i remember walking with you
 	Bot: Do you often think of walking with you?
-	
-Instead of using System.out.println() I created a class print to use instead.
 
 You can set the number of iterations by changing line 41:
 int n = 3;

@@ -2,12 +2,13 @@ package chatbot14;
 
 public class Bot{
     public String process(String sentence){
-        //Reads in all the sentence as individual words
+    	String response = "";
+    	//Reads in all the sentence as individual words
         String[] words = sentence.split(" ");
         //If they responded
         if(!words[0].equals("")){
           //Initializes the string to concatenate
-            String response = "";
+            response = "";
             //Number of words in sentence
             int index = 0;
             //Analyzes words
