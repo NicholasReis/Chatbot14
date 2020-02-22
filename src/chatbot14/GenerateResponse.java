@@ -104,11 +104,13 @@ public class GenerateResponse {
 	
 	// First step for this is to try one keyword and apply an appropriate response
 	static String applyPatternAndGetResponse(String wholeSentence, Stack<Integer> index) {
+		// if stack is empty, return null
+		
 		// for the first keyword that matches, find if the pattern matches.
 		
 		// if the pattern matches apply the rule
 		
-		// else move onto the next keyword
+		// else return null
 		return "";
 	}
 	
