@@ -2,6 +2,7 @@ package chatbot14;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class GenerateResponse {
 	
@@ -24,31 +25,31 @@ public class GenerateResponse {
 		return response;
 	}
 	
-	private static String[] transformKeywords(String[] words) {
+	static String[] transformKeywords(String[] words) {
 		//transform keywords change to the actual string in second arraylist
 		for(int i = 0; i<words.length; i++) {
-			for(int j = 0; j<transform.length;j++) {
+			for(int j = 0; j<transform[0].length;j++) {
 				if (words[i].equals(transform[0][j]))
-					words[i].equals(transform[1][j]);
-			}
+					words[i] = transform[1][j];
+				}
 			}
 		return words;
 	}
 	
-	private static List<Integer> searchKeywords(String[] words1) {
+	static Stack<Integer> searchKeywords(String[] words1) {
 		//search if the keywords match the keywords list, return the index of the keywords match which in the list
-		List<Integer> myList = new ArrayList<Integer>();
-		for(int i = 0; i<words1.length;i++) {
-			for(int j = 0;j<keywords.length;j++) {
-				if(words1[i].equals(keywords[j]))
-					myList.add(j);
+		Stack<Integer> stack = new Stack<Integer>();
+		for(int i = 0; i<keywords.length;i++) {
+			for(int j = 0;j<words1.length;j++) {
+				if(words1[j].equals(keywords[i]))
+					stack.push(i);
 			}
 		}
-		return myList;
+		return stack;
 	}
 	
 	private static String combineSentence(String[] words2, List<Integer> index) {
-		//  iterate through words 2 and combine them into one String
+		//  iterate through words2 and combine them into one String
 		String s = "";
 		for(int i = 0;i<index.toArray().length;i++) {
 			s += keywords[index.indexOf(i)];
@@ -57,8 +58,11 @@ public class GenerateResponse {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		String[] words1 = "you are funny because everyone says you are".split(" ");
+		Stack<Integer> stack = searchKeywords(words1);
+		System.out.println(stack);
+		System.out.println(stack.pop());
+		System.out.println(stack.pop());
 	}
 
 }
