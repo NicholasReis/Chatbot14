@@ -21,7 +21,18 @@ class GenerateResponseTest {
 	void testSearchKeywords() {
 		String words1 = "you are funny because everyone says you are";
 		Stack<Integer> actual = GenerateResponse.searchKeywords(words1.split(" "));
-		//assertEquals(actual.pop(),new Integer())
+		assertEquals(actual.pop(),new Integer(5)); // should be expected, then the actual value, but it's reversed in this method
+		assertEquals(actual.pop(),new Integer(3));
+		assertEquals(actual.pop(),new Integer(0));
+		assertEquals(actual.pop(),new Integer(0));
+	}
+	
+	@Test
+	void testCombineSentence() {
+		String[] words = {"have","a","bone"};
+		String actual = GenerateResponse.combineSentence(words);
+		String expected = "have a bone";
+		assertEquals(expected, actual);
 	}
 
 }
