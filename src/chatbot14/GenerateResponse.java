@@ -23,8 +23,7 @@ public class GenerateResponse {
 	
 	private static String[] transformKeywords(String[] words) {
 		//transform keywords change to the actual string in second arraylist
-		for (i=0;i<length())
-		return words;
+				return words;
 	}
 	
 	private static int searchKeywords(String[] words1) {
