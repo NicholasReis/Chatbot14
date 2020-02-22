@@ -2,7 +2,6 @@ package chatbot14;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Stack;
 
 public class GenerateResponse {
@@ -15,7 +14,7 @@ public class GenerateResponse {
 	static String[] keywords = {"are","what","because","always","everyone","was","if","remember"};
 	
 	//these are the patterns for each of the keywords
-	ArrayList<ArrayList<String>> keywordPatterns = new ArrayList(Arrays.asList(
+	static ArrayList<ArrayList<String>> keywordPatterns = new ArrayList(Arrays.asList(
 			new ArrayList(Arrays.asList("(0 are you 0)")), //are
 			new ArrayList(Arrays.asList("(0)")), //what
 			new ArrayList(Arrays.asList("(0)")), //because
@@ -26,7 +25,7 @@ public class GenerateResponse {
 			new ArrayList(Arrays.asList("(0 i remember 0)","(0 do you remember 0)")))); //remember
 	
 	// these are responses. It's a triple nested arraylist because if there are multiple patterns per keyword, then you have multiple responses
-	ArrayList<ArrayList<ArrayList<String>>> keywordResponses = new ArrayList(Arrays.asList(
+	static ArrayList<ArrayList<ArrayList<String>>> keywordResponses = new ArrayList(Arrays.asList(
 			new ArrayList(new ArrayList(Arrays.asList(
 					new ArrayList(Arrays.asList("(do you believe you are 4)","(would you want to be 4)","(you wish i would tell you you are 4)","(what would it mean if you were 4)"))))
 					), //are
@@ -54,10 +53,7 @@ public class GenerateResponse {
 					new ArrayList(Arrays.asList("Do you often think of 0?","Does thinking of 0 bring anything else to mind?","What else do you remember?","Why did you remember 0 just now?","What in the present situation reminds you of 0?","What is the connection between me and 0?")), 
 					new ArrayList(Arrays.asList("Did you think I would forget 0?","Why do you think I should recall 0 now?","What about 0?","You mentioned 0."))))
 					))); //remember
-	
-	public static void setUpClass() {
-		//keywordPatterns = new List<>();
-	}
+
 	
 	public static String generateResponse(String[] words) {
 		// transform the necessary words, plus generate a stack of the indices of keywords in the String array words
@@ -75,10 +71,12 @@ public class GenerateResponse {
 		//transform keywords change to the actual string in second arraylist
 		for(int i = 0; i<words.length; i++) {
 			for(int j = 0; j<transform[0].length;j++) {
-				if (words[i].equals(transform[0][j]))
+				if (words[i].equals(transform[0][j])) {
 					words[i] = transform[1][j];
-				}
+					break; //can only transform a word once
+				} 
 			}
+		}
 		return words;
 	}
 	
@@ -104,9 +102,13 @@ public class GenerateResponse {
 		return s;
 	}
 	
-	// 
-	static String applyPatternAndGetResponse() {
+	// First step for this is to try one keyword and apply an appropriate response
+	static String applyPatternAndGetResponse(String wholeSentence, Stack<Integer> index) {
+		// for the first keyword that matches, find if the pattern matches.
 		
+		// if the pattern matches apply the rule
+		
+		// else move onto the next keyword
 		return "";
 	}
 	
