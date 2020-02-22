@@ -1,5 +1,8 @@
 package chatbot14;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GenerateResponse {
 	
 	// The first row of the transform array is the words we want to change, the second row are the words we want to change them into
@@ -12,8 +15,8 @@ public class GenerateResponse {
 	public static String generateResponse(String[] words) {
 		// transform the necessary words, plus generate a stack of the indices of keywords in the String array words
 		words = transformKeywords(words);
-		int index = searchKeywords(words);
-		String wholeSentence = combineSentence(words);
+		List<Integer> index = searchKeywords(words);
+		String wholeSentence = combineSentence(words,index);
 		
 		
 		String response="";
@@ -23,18 +26,34 @@ public class GenerateResponse {
 	
 	private static String[] transformKeywords(String[] words) {
 		//transform keywords change to the actual string in second arraylist
-				return words;
+		for(int i = 0; i<words.length; i++) {
+			for(int j = 0; j<transform.length;j++) {
+				if (words[i].equals(transform[0][j]))
+					words[i].equals(transform[1][j]);
+			}
+			}
+		return words;
 	}
 	
-	private static int searchKeywords(String[] words1) {
+	private static List<Integer> searchKeywords(String[] words1) {
 		//search if the keywords match the keywords list, return the index of the keywords match which in the list
-		return 0;
+		List<Integer> myList = new ArrayList<Integer>();
+		for(int i = 0; i<words1.length;i++) {
+			for(int j = 0;j<keywords.length;j++) {
+				if(words1[i].equals(keywords[j]))
+					myList.add(j);
+			}
+		}
+		return myList;
 	}
 	
-	private static String combineSentence(String[] words2) {
+	private static String combineSentence(String[] words2, List<Integer> index) {
 		//  iterate through words 2 and combine them into one String
-		
-		return "";
+		String s = "";
+		for(int i = 0;i<index.toArray().length;i++) {
+			s += keywords[index.indexOf(i)];
+		}
+		return s;
 	}
 	
 	public static void main(String[] args) {
