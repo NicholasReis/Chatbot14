@@ -11,15 +11,31 @@ public class GenerateResponse {
 	
 	public static String generateResponse(String[] words) {
 		// transform the necessary words, plus generate a stack of the indices of keywords in the String array words
-		findKeywords(words);
+		words = transformKeywords(words);
+		int index = searchKeywords(words);
+		String wholeSentence = combineSentence(words);
+		
+		
 		String response="";
 		
 		return response;
 	}
 	
-	private static String[] findKeywords(String[] words) {
-		
+	private static String[] transformKeywords(String[] words) {
+		//transform keywords change to the actual string in second arraylist
+		for (i=0;i<length())
 		return words;
+	}
+	
+	private static int searchKeywords(String[] words1) {
+		//search if the keywords match the keywords list, return the index of the keywords match which in the list
+		return 0;
+	}
+	
+	private static String combineSentence(String[] words2) {
+		//  iterate through words 2 and combine them into one String
+		
+		return "";
 	}
 	
 	public static void main(String[] args) {
