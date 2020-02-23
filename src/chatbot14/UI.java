@@ -2,7 +2,7 @@ package chatbot14;
 
 import java.util.Scanner;
 
-class ChatBot{
+class UI{
     public static void main(String[] args){
         //Initializes scanner
         Scanner scan = new Scanner(System.in);
