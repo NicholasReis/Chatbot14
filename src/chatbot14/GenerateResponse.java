@@ -111,7 +111,18 @@ public class GenerateResponse {
 		// if the pattern matches apply the rule
 		
 		// else return null
-		return "";
+		
+		if(index.isEmpty()==true)
+			return null;
+		//if(wholeSentence.matches(keywords[index.firstElement()])==true){
+		else if(wholeSentence.matches(keywordPatterns.get(index.firstElement()).toString())) {
+				return keywordResponses.get(index.firstElement()).toString();
+			}
+			else
+				return null;
+		//}
+		
+		//return "";
 	}
 	
 	public static void main(String[] args) {
