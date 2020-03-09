@@ -6,8 +6,11 @@ Contains the two classes Bot and ChatBot which include the starter code that Nic
 
 ### GenerateResponse class
 ***transformKeywords method*** Transformations on single words in the user input to change them from the user perspective to the bot perspective. This allows any text reused from the user input in the bot response to make sense. For example, how-> what, when -> what, am -> are, I -> you,  you -> I.
+
 ***searchKeywords method*** Searches for the keywords that we will use to select a response from the list of response templates.
+
 ***combineSentence method*** Changing the user input String array to a single string in order to apply the regex expression.
+
 ***applyPatternAndGetResponse*** Extract the relevant input from the user input and transform it according to an appropriate rule related to the keyword.
 
 ## package sample
