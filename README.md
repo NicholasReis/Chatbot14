@@ -10,10 +10,10 @@ Implemented by Heather. Refer to her for questions about it.
 Instead of using System.out.println() I created a class print to use instead. (Too lazy to use System.out.println())
 
 ### chatty0 class
-Simple example of how to implement regex expressions. Exists for the sake of learning and understanding the chatty1 class.
+Simple example of how to implement regex expressions. Exists for the sake of learning and understanding the chatty1 class. Applies regex expression to extract content from a user input and add it to a bot response pattern template. Uses single keyword and single response pattern template.
 
 ### chatty1 class
-Implements the Eliza script for the keyword remember
+Implements the Eliza script for the keyword remember. Matches multiple regex patterns to user input to extract content and add it to a randomly selected bot response pattern template. Uses single keyword and multiple response pattern templates.
 
 Limitations of chatty1 class: 
  * Can only write in lowercase - it doesn't parse uppercase yet.
