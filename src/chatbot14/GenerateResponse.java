@@ -54,7 +54,6 @@ public class GenerateResponse {
 					new ArrayList(Arrays.asList("Did you think I would forget 0?","Why do you think I should recall 0 now?","What about 0?","You mentioned 0."))))
 					))); //remember
 
-	
 	public static String generateResponse(String[] words) {
 		// transform the necessary words, plus generate a stack of the indices of keywords in the String array words
 		words = transformKeywords(words);
@@ -66,7 +65,11 @@ public class GenerateResponse {
 		
 		return response;
 	}
-	
+	/*
+	Loop through every word in the String array words and check if it matches any of the words in the first row of the 2-D string 
+	array transform (how, when, am, your). If there is a match convert them to their appropriate transformation in the second row 
+	of the 2-D string array transform (what, what, are, my). For example, how->what, when -> what, am -> are.
+	*/
 	static String[] transformKeywords(String[] words) {
 		//transform keywords change to the actual string in second arraylist
 		for(int i = 0; i<words.length; i++) {
@@ -79,7 +82,11 @@ public class GenerateResponse {
 		}
 		return words;
 	}
-	
+	/*
+	Loop through every word in the String array words and check for the keywords (are, can, what). 
+	If you find a keyword, then return the index that the keyword is found. 
+	ie. if you find the keyword "are", then return index 0.
+	*/
 	static Stack<Integer> searchKeywords(String[] words1) {
 		//search if the keywords match the keywords list, return the index of the keywords match which in the list
 		Stack<Integer> stack = new Stack<Integer>();
@@ -91,7 +98,9 @@ public class GenerateResponse {
 		}
 		return stack;
 	}
-	
+	/*
+	Combine the words in the String array into one word, in order to get ready to apply the regex expression.
+	*/
 	static String combineSentence(String[] words2) {
 		//  iterate through words2 and combine them into one String
 		String s = "";
@@ -101,8 +110,10 @@ public class GenerateResponse {
 		}
 		return s;
 	}
-	
-	// First step for this is to try one keyword and apply an appropriate response
+	/*
+	Extract the relevant input from the user input and transform it according to an appropriate rule related to the keyword
+	First step for this is to try one keyword and apply an appropriate response.
+	*/
 	static String applyPatternAndGetResponse(String wholeSentence, Stack<Integer> index) {
 		// if stack is empty, return null
 		
