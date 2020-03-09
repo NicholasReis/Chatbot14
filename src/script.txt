@@ -1,0 +1,46 @@
+are
+((0 are you 0) (do you believe you are 4)","(would you want to be 4)","(you wish i would tell you you are 4)","(what would it mean if you were 4)
+
+what
+(0)(why do you ask)(does that question interest you)
+(what is it you really want to know)
+(are such questions much on your mind)
+(what answer would please you most)(what do you think)
+(what comes to your mind when you ask that)
+(have you asked such question before)
+(have you asked anyone else)
+
+because
+(0)(is that the real reason)(don't any other reasons come to mind)
+(does that reason seem to explain anything else)
+(what other reasons might there be)
+
+always
+(0)(can you think of a specific example)(when)(what incident are you thinking of)(really, always)
+
+everyone
+(0)(can you think of anyone in particular)
+(who, for example)(you are thinking of a very special person)
+(who, may I ask)(someone special perhaps)
+(you have a particular person in mind, don't you)
+(who do you think you're talking about)
+
+was
+((0 was you 0 )
+(what if you were 4) (do you think you were 4)
+(were you 4) (what would it mean if you were 4)
+(what does ' 4 ' suggest to you))
+((0 you was 0)
+(were you really) (why do you tell me you were 4 now)
+(perhaps i already knew you were 4) )
+((0 was i 0) (would you like to believe i was 4)
+(what suggests that i was 4)
+(what do you think) (perhaps i was 4)
+(what if i had been 4))
+
+if 
+((0 if 0) (do you think its likely that 3) (do you wish that 3)
+(what do you think about 3) (really, 2 3)))
+
+remember
+-done
