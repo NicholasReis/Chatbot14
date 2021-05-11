@@ -38,3 +38,6 @@ In line 51 a random number is generated to return one of the responses in the re
 ## ideas
 Text-to-speech - free services - 350 daily requests
 http://www.voicerss.org/default.aspx
+
+## UPDATE
+Project relocated to new repository. Keeping this up in case other group members want access to the old files.
